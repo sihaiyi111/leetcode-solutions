@@ -1,0 +1,14 @@
+// LeetCode 1512: https://leetcode.com/problems/number-of-good-pairs/
+// Given an array nums, return the number of identical pairs (i, j) where nums[i] == nums[j] and i < j.
+// Solution: Brute force with double loop in C.
+int numIdenticalPairs(int* nums, int numsSize) {
+    int sum = 0;
+    for (int i = 0; i < numsSize; i++) {
+        for (int j = i + 1; j < numsSize; j++) {
+            if (nums[i] == nums[j]) {
+                sum++;
+            }
+        }
+    }
+    return sum;
+}
